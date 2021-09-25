@@ -1,0 +1,57 @@
+body {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 90px 400px 200px 50px;
+    grid-template-areas:
+      "companyLogo null navItems navItems"
+      "productImg productImg productImg productImg"
+      "product1 product1 product2 product2"
+      "footer footer footer footer";
+}
+div,nav ul, section, footer, a {
+    background: silver;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+div{
+    grid-area: companyLogo;
+}
+
+nav{
+    align-self: center;
+    grid-area: navItems;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 50px;
+    grid-template: auto / repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-content: center;
+}
+
+#productImg {
+    grid-area: productImg;
+}
+
+#product1{
+    grid-area: product1;
+}
+
+#product2 {
+    grid-area: product2;
+  
+}
+footer {
+    text-align: center;
+    align-content: center;
+    grid-area: footer;
+  }
+  
